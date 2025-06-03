@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+
+.brand-logos {
+  display: flex;
+  gap: 2rem;
+}
+
+.animate-slide-left {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+.animate-slide-right {
+  transform: translateX(100px);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+.animate-fade-up {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+.animate-fade-in {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+.in-view {
+  transform: translateX(0) translateY(0);
+  opacity: 1;
+}

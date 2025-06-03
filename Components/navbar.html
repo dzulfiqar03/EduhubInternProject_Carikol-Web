@@ -1,27 +1,174 @@
-  <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-    <div class="flex lg:flex-1">
-      <a href="#" class="-m-1.5 p-1.5">
-        <span class="sr-only">Your Company</span>
-        <img class="h-8 w-auto" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="">
-      </a>
-    </div>
-    <div class="flex lg:hidden">
-      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-        <span class="sr-only">Open main menu</span>
-        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
-      </button>
-    </div>
-    <div class="hidden lg:flex lg:gap-x-12">
-      <a href="/home" class="text-sm/6 font-semibold text-gray-900" id="home">Home</a>
-      <a href="/service" class="text-sm/6 font-semibold text-gray-900" id="service">Services</a>
-      <a href="/about" class="text-sm/6 font-semibold text-gray-900" id="about">About</a>
-      <a href="/contactus" class="text-sm/6 font-semibold text-gray-900" id="contact">Contact Us</a>
-   </div>
-   
-    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-      <a href="#" class="text-sm/6 font-semibold text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
-    </div>
-  </nav>
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+      <nav class="w-11/12 max-w-6xl mx-auto md:py-4 md:w-11/12">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center gap-2">
+            <img
+              src="/resources/assets/images/logo.png"
+              alt=""
+              class="w-6 h-6 md:w-8 md:h-8"
+            />
+            <div class="text-xl font-bold text-teal-600 sm:text-2xl">
+              CariKOL
+            </div>
+          </div>
 
+          <div class="items-center hidden gap-12 md:flex">
+            <details class="relative group">
+              <summary
+                class="flex items-center gap-2 font-medium text-gray-700 list-none cursor-pointer hover:text-teal-600"
+              >
+                For KOL
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  class="size-4"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </summary>
+              <div
+                class="absolute z-50 mt-2 bg-white rounded-md shadow-md w-max"
+              >
+                <a
+                  href="#"
+                  class="block p-2 px-4 text-sm hover:bg-teal-600 hover:text-white"
+                  >Buat Rate Card Tiktok
+                </a>
+                <a
+                  href="#"
+                  class="block p-2 px-4 text-sm hover:bg-teal-600 hover:text-white"
+                  >Buat Rate Card Instagram</a
+                >
+                <a
+                  href="#"
+                  class="block p-2 px-4 text-sm hover:bg-teal-600 hover:text-white"
+                  >Buat Rate Card Youtube</a
+                >
+              </div>
+            </details>
+
+            <details class="relative group">
+              <summary
+                class="flex items-center gap-2 font-medium text-gray-700 list-none cursor-pointer hover:text-teal-600"
+              >
+                For Brand
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  class="size-4"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </summary>
+              <div
+                class="absolute z-50 mt-2 bg-white rounded-md shadow-md w-max"
+              >
+                <a
+                  href="#"
+                  class="block p-2 px-4 text-sm hover:bg-teal-600 hover:text-white"
+                  >Cek Rate Card Tiktok
+                </a>
+                <a
+                  href="#"
+                  class="block p-2 px-4 text-sm hover:bg-teal-600 hover:text-white"
+                  >Cek Rate Card Instagram</a
+                >
+                <a
+                  href="#"
+                  class="block p-2 px-4 text-sm hover:bg-teal-600 hover:text-white"
+                  >Cek Rate Card Youtube</a
+                >
+              </div>
+            </details>
+
+            <div class="flex items-center gap-4">
+              <a
+                href="/html/auth/login.html"
+                class="block px-3 py-2 text-center text-white bg-teal-800 border-2 border-teal-800 rounded-full hover:bg-teal-900"
+                >Login</a
+              >
+              <a
+                href="/html/auth/register.html"
+                class="block px-3 py-2 text-center text-teal-800 border-2 border-teal-800 rounded-full hover:text-teal-900 hover:border-teal-900"
+                >Register</a
+              >
+            </div>
+          </div>
+
+          <details class="relative md:hidden group open">
+            <summary class="flex items-center list-none cursor-pointer">
+              <svg
+                class="w-6 h-6 text-gray-700 group-has-[open]:hidden group-has-[closed]:hidden"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </summary>
+
+            <div
+              class="absolute right-0 z-50 p-4 mt-2 space-y-4 text-sm bg-white rounded-md shadow-lg w-60"
+            >
+              <details>
+                <summary class="font-medium text-gray-800 cursor-pointer">
+                  For Brand
+                </summary>
+                <div class="pl-4 mt-1 space-y-1">
+                  <a href="#" class="block hover:text-teal-600">Cari KOL</a>
+                  <a href="#" class="block hover:text-teal-600"
+                    >Kelola Kampanye</a
+                  >
+                  <a href="#" class="block hover:text-teal-600">Analitik</a>
+                </div>
+              </details>
+
+              <details>
+                <summary class="font-medium text-gray-800 cursor-pointer">
+                  For KOL
+                </summary>
+                <div class="pl-4 mt-1 space-y-1">
+                  <a href="#" class="block hover:text-teal-600"
+                    >Buat Rate Card</a
+                  >
+                  <a href="#" class="block hover:text-teal-600">Job Listing</a>
+                  <a href="#" class="block hover:text-teal-600"
+                    >Tips & Edukasi</a
+                  >
+                </div>
+              </details>
+
+              <div
+                class="flex flex-col gap-2 pt-2 border-t border-gray-200 md:flex-row"
+              >
+                <a data-page="/Components/Pages/auth/login.html"
+                  href="#"
+                  class="block py-2 text-center text-white bg-teal-800 border-2 border-teal-800 rounded-full hover:bg-teal-900"
+                  >Login</a>
+                >
+                <a data-page="./Components/Pages/auth/register.html"
+                  href="#"
+                  class="block py-2 text-center text-teal-800 border-2 border-teal-800 rounded-full"
+                  >Register</a
+                >
+              </div>
+            </div>
+          </details>
+        </div>
+      </nav>
+    </header>
