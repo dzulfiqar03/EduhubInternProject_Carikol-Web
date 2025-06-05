@@ -105,6 +105,17 @@
             >
               Login
             </button>
+
+            <div class="text-sm text-center m-auto row">
+              <span>Don&apos;t Have Account? </span>
+              <a
+                href="#"
+                id="registers"
+                class="text-gray-700 font-bold hover:text-teal-600"
+              >
+                Register Now
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -121,7 +132,7 @@
           ).value;
 
           // Contoh validasi sederhana
-          if (email === "admin@example.com" && password === "admin123") {
+          if (email === "admin@gmail.com" && password === "admin123") {
             // Simpan token login (dummy)
             localStorage.setItem("authToken", "dummyToken123");
 
@@ -136,6 +147,30 @@
             alert("Email atau password salah!");
           }
         });
+
+      document.addEventListener("click", function (e) {
+        // Jika yang diklik adalah link dengan id "register"
+        if (e.target && e.target.id === "registers") {
+          e.preventDefault(); // Hindari reload halaman
+
+          // Load konten register.html ke dalam #content
+          fetch("/Components/Pages/auth/register.html")
+            .then((response) => {
+              if (!response.ok)
+                throw new Error("HTTP error " + response.status);
+              return response.text();
+            })
+            .then((html) => {
+              document.getElementById("app-root").innerHTML = html;
+              Alpine.initTree(document.getElementById("app-root"));
+            })
+            .catch((error) => {
+              document.getElementById(
+                "app-root"
+              ).innerHTML = `<p class="text-red-500">Gagal memuat halaman: ${error.message}</p>`;
+            });
+        }
+      });
     </script>
 
     <!-- RIGHT CONTENT / CAROUSEL (Hidden on mobile) -->

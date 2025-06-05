@@ -25,23 +25,23 @@ $(document).ready(function () {
   });
 
   // Fungsi untuk memuat konten ke dalam #app-root
- function loadPage(page) {
-  $("#app-root").load(page, function () {
-    console.log(`Halaman ${page} telah dimuat.`);
+  function loadPage(page) {
+    $("#app-root").load(page, function () {
+      console.log(`Halaman ${page} telah dimuat.`);
 
-    // Sembunyikan navbar jika halaman login
-    if (page.includes("login.html")) {
-      $("header").hide();
-    } else {
-      $("header").show();
-    }
+      // Sembunyikan navbar jika halaman login
+      if (page.includes("login.html")) {
+        $("header").hide();
+      } else {
+        $("header").show();
+      }
 
-    // Inisialisasi khusus jika halaman home
-    if (page.includes("home.html")) {
-      initFaq(); // pastikan fungsi ini didefinisikan
-    }
-  });
-}
+      // Inisialisasi khusus jika halaman home
+      if (page.includes("home.html")) {
+        initFaq(); // pastikan fungsi ini didefinisikan
+      }
+    });
+  }
 
 
   // Fungsi untuk menangani perubahan halaman berdasarkan klik di navbar
@@ -66,7 +66,7 @@ $(document).ready(function () {
       loadPage("./Components/Pages/contact.html"); // Ganti dengan company.html
     });
 
-     $('#login').on('click', function (e) {
+    $('#login').on('click', function (e) {
       e.preventDefault();
       loadPage("./Components/Pages/auth/login.html"); // Ganti dengan company.html
     });
@@ -118,3 +118,6 @@ $(document).ready(function () {
   window.addEventListener('load', revealElements); // To reveal elements that are already in the viewport on load
 
 });
+
+
+
